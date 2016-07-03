@@ -59,7 +59,7 @@ var FormValidation = function () {
                     $.ajax({
                      url:"index.php/email/sendmail",
                      method:"POST",
-                     data: { to: $('#to').val() , from: $('#from').val(), subject: $('#subject').val(), body: $('#body').val(), "g-recaptcha-response" : grecaptcha.getResponse() } ,
+                     data: { to: $('#to').val() , from: $('#from').val(), fromname: $('#fromname').val(), subject: $('#subject').val(), body: $('#body').val(), "g-recaptcha-response" : grecaptcha.getResponse() } ,
                      success: function(result){
                         var res = $.parseJSON(result);                         
                         if(res.status == 'captchaerror')

@@ -8,10 +8,10 @@ class Email_model extends CI_Model {
                 parent::__construct();
         }
 
-        public function sendEmail($monil,$from,$toemail,$subject,$body)
+        public function sendEmail($monil,$fromname,$from,$toemail,$subject,$body)
         {        
                 $to = array($toemail);
-                $monil->sendEmail($from,$to,$subject,$body);
+                $monil->sendEmail($fromname,$from,$to,$subject,$body);
                 return array("status" => "success");
         }
         

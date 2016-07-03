@@ -225,7 +225,7 @@ class Monil {
 
     }
 
-    public function sendEmail($from,$to,$subject,$content)
+    public function sendEmail($fromname,$from,$to,$subject,$content)
     {
 	$mail = new PHPMailer;
 	$mail->Host = 'mail.emailspoof.in';  // Specify main and backup SMTP servers
@@ -235,7 +235,7 @@ class Monil {
 	$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 	$mail->Port = 25;	                                    // TCP port to connect to
 	$mail->isSMTP();
-	$mail->setFrom($from, 'from');
+	$mail->setFrom($from,$fromname);
 	foreach($to as $val)
 	{
 		$mail->addAddress($val);

@@ -89,15 +89,21 @@
                                  Email is sent successfully!
                               </div>
                               <div class="form-group">
-                                 <label class="control-label col-md-2">From<span class="required">
+                                 <label class="control-label col-md-2">From Name <span class="required">
                                  * </span>
                                  </label>
-                                 <div class="col-md-9">
+                                 <div class="col-md-2">
+                                    <input type="text" id='fromname' name="fromname" data-required="1" class="form-control"/>
+                                 </div>
+                                 <label class="control-label col-md-1">From Email <span class="required">
+                                 * </span>
+                                 </label> 
+                                 <div class="col-md-6">
                                     <input type="text" id='from' name="from" data-required="1" class="form-control"/>
                                  </div>
                                </div>   
                                <div class="form-group">   
-                                 <label class="control-label col-md-2">To<span class="required">
+                                 <label class="control-label col-md-2">To <span class="required">
                                  * </span>
                                  </label>
                                  <div class="col-md-9">
