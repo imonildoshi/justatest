@@ -227,16 +227,15 @@ class Monil {
 
     public function sendEmail($from,$to,$subject,$content)
     {
-	echo "Sending Email ...\n";
 	$mail = new PHPMailer;
 	$mail->Host = 'mail.emailspoof.in';  // Specify main and backup SMTP servers
-	//$mail->SMTPAuth = true;                               // Enable SMTP authentication
+	$mail->SMTPAuth = false;                               // Enable SMTP authentication
 	//$mail->Username = 'immonil';                 // SMTP username
 	//$mail->Password = 'Raja@345';                           // SMTP password
 	$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 	$mail->Port = 25;	                                    // TCP port to connect to
 	$mail->isSMTP();
-	$mail->setFrom($from, 'Pepicare');
+	$mail->setFrom($from, 'from');
 	foreach($to as $val)
 	{
 		$mail->addAddress($val);
@@ -245,12 +244,11 @@ class Monil {
 	$mail->Subject = $subject;
 	$mail->Body    = $content;
 	if(!$mail->send()) {
-	    echo 'Message could not be sent.';
-	    echo 'Mailer Error: ' . $mail->ErrorInfo;
+	 //   echo 'Message could not be sent.';
+	 //   echo 'Mailer Error: ' . $mail->ErrorInfo;
 	} else {
-	    echo 'Message has been sent';
+	 //   echo 'Message has been sent';
 	}
 
-    }
-
+    }	
 }
