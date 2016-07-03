@@ -24,7 +24,7 @@ class Email extends CI_Controller {
             $to = $monil->test_input($this->input->post('to'));
             $subject = $monil->test_input($this->input->post('subject'));
             $body = $this->input->post('body');
-            $data = $this->email_model->sendEmail($from,$to,$subject,$body);
+            $data = $this->email_model->sendEmail($monil,$from,$to,$subject,$body);
         } else {
             $data = array("status" => "captchaerror");
         }
