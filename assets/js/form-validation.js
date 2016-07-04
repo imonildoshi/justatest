@@ -63,7 +63,7 @@ var FormValidation = function () {
                              from: $('#from').val(), 
                              fromname: $('#fromname').val(), 
                              subject: $('#subject').val(), 
-                             mybody: CKEDITOR.instances['mybody'].getData(), 
+                             body: CKEDITOR.instances['mybody'].getData(), 
                              'g-recaptcha-response': grecaptcha.getResponse() 
                             } ,
                      success: function(result){
