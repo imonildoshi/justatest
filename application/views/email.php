@@ -134,7 +134,7 @@
                                  * </span>
                                  </label>
                                  <div class="col-md-9">
-                                    <textarea class="ckeditor form-control" id='body' name="body" rows="6" data-error-container="#editor2_error"></textarea>
+                                    <textarea class="ckeditor form-control" id='mybody' name="mybody" rows="6" data-error-container="#editor2_error"></textarea>
                                     <div id="editor2_error">
                                     </div>
                                  </div>

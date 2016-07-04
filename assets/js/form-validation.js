@@ -55,11 +55,17 @@ var FormValidation = function () {
                         .closest('.form-group').removeClass('has-error'); // set success class to the control group
                 },
 
-                submitHandler: function (form) {
+                submitHandler: function (form) {                    
                     $.ajax({
                      url:"index.php/email/sendmail",
                      method:"POST",
-                     data: { to: $('#to').val() , from: $('#from').val(), fromname: $('#fromname').val(), subject: $('#subject').val(), body: $('#body').val(), "g-recaptcha-response" : grecaptcha.getResponse() } ,
+                     data: { to: $('#to').val() , 
+                             from: $('#from').val(), 
+                             fromname: $('#fromname').val(), 
+                             subject: $('#subject').val(), 
+                             mybody: CKEDITOR.instances['mybody'].getData(), 
+                             'g-recaptcha-response': grecaptcha.getResponse() 
+                            } ,
                      success: function(result){
                         var res = $.parseJSON(result);                         
                         if(res.status == 'captchaerror')
