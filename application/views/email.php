@@ -2,7 +2,7 @@
 <!-- BEGIN HEAD -->
 <head>
    <meta charset="utf-8"/>
-   <title>Email sender</title>
+   <title>Email Spoof</title>
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
@@ -26,8 +26,9 @@
    <link href="assets/css/layout.css" rel="stylesheet" type="text/css"/>
    <link id="style_color" href="assets/css/light.css" rel="stylesheet" type="text/css"/>
    <link href="assets/css/custom.css" rel="stylesheet" type="text/css"/>
-   <!-- END THEME STYLES -->
-   <link rel="shortcut icon" href="favicon.ico"/>
+   <!-- END THEME STYLES -->   
+   <link rel="shortcut icon" href="<?php echo base_url(); ?>emailspoofin.png" type="image/png">
+   <link rel="icon" href="<?php echo base_url(); ?>emailspoofin.png" type="image/png"> 
    <style>
        .page-content-wrapper .page-content {
             margin-left: 0px !important;
@@ -58,7 +59,17 @@
 <!-- DOC: Apply "page-full-width" class to the body element to have full width page without the sidebar menu -->
 <body class="page-md page-header-fixed page-sidebar-closed-hide-logo ">
    <!-- BEGIN HEADER -->
-   <div class="page-header md-shadow-z-1-i navbar navbar-fixed-top">	</div>
+   <div class="page-header md-shadow-z-1-i navbar navbar-fixed-top">	
+    <div class="page-header-inner">
+<!--	<div class="page-header-inner container">  -->
+		<!-- BEGIN LOGO -->
+		<div class="page-logo">
+			<a href="http://www.emailspoof.in">
+			<img height="45px" style="margin: 13px; padding-left: 1cm;" src="assets/img/emailspoofin.png" alt="EmailSpoofIn" class="logo-default"/>
+			</a>			
+		</div>
+    </div>            
+   </div>
    <!-- END HEADER -->
    <div class="clearfix"></div>
    <!-- BEGIN CONTAINER -->
