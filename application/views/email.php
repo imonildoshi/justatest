@@ -67,7 +67,7 @@
 		<!-- BEGIN LOGO -->
 		<div class="page-logo">
 			<a href="http://www.emailspoof.in">
-			<img height="45px" style="margin: 13px; padding-left: 1cm;" src="assets/img/emailspoofin.png" alt="EmailSpoofIn" class="logo-default"/>
+			<img height="70px" style="margin: 1px; padding-left: 0.5cm;" src="assets/img/emailspoofin.png" alt="EmailSpoofIn" class="logo-default"/>
 			</a>			
 		</div>
     </div>            
