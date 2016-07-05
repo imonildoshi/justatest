@@ -18,7 +18,8 @@
    <!-- END GLOBAL MANDATORY STYLES -->
    <!-- BEGIN PAGE LEVEL STYLES -->
    <link rel="stylesheet" type="text/css" href="assets/select2/select2.css"/>   
-   <link rel="stylesheet" type="text/css" href="assets/bootstrap-markdown/css/bootstrap-markdown.min.css">   
+   <link rel="stylesheet" type="text/css" href="assets/bootstrap-markdown/css/bootstrap-markdown.min.css">
+   <link rel="stylesheet" type="text/css" href="assets/jquery-notific8/jquery.notific8.min.css"/>
    <!-- END PAGE LEVEL SCRIPTS -->
    <!-- BEGIN THEME STYLES -->
    <link href="assets/css/components-md.css" id="style_components" rel="stylesheet" type="text/css"/>
@@ -32,7 +33,7 @@
    <style>
        .page-content-wrapper .page-content {
             margin-left: 0px !important;
-       }
+       }       
    </style>
    <script src='https://www.google.com/recaptcha/api.js'></script>
    <script>
@@ -44,6 +45,7 @@
       ga('create', 'UA-80209290-1', 'auto');
       ga('send', 'pageview');
     </script>
+       
 </head>
 
 <!-- END HEAD -->
@@ -151,7 +153,7 @@
                            <div class="form-actions">
                               <div class="row">
                                  <div class="col-md-offset-6 col-md-9">
-                                    <button type="submit" class="btn green">Send Email</button>                                    
+                                    <button type="submit" class="btn blue">Send Email</button>                                    
                                  </div>
                               </div>
                            </div>
@@ -200,6 +202,9 @@
    <script type="text/javascript" src="assets/ckeditor/ckeditor.js"></script>
    <script type="text/javascript" src="assets/bootstrap-markdown/js/bootstrap-markdown.js"></script>
    <script type="text/javascript" src="assets/bootstrap-markdown/lib/markdown.js"></script>
+   <script src="assets/jquery-notific8/jquery.notific8.min.js"></script>
+   <script src="assets/js/ui-notific8.js"></script>
+
    <!-- END PAGE LEVEL PLUGINS -->
    <!-- BEGIN PAGE LEVEL STYLES -->
    <script src="assets/js/metronic.js" type="text/javascript"></script>
@@ -210,12 +215,13 @@
    <script>
       jQuery(document).ready(function() {   
          // initiate layout and plugins
-         Metronic.init(); // init metronic core components
+      Metronic.init(); // init metronic core components
       Layout.init(); // init current layout
       Demo.init(); // init demo features
-         FormValidation.init();
+      FormValidation.init();
+      UINotific8.init();
       });
-   </script>
+   </script>              
    <!-- END JAVASCRIPTS -->
 </body>
 <!-- END BODY -->
