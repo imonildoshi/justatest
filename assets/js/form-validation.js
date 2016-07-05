@@ -59,9 +59,15 @@ var FormValidation = function () {
                     $.ajax({
                      url:"index.php/email/sendmail",
                      method:"POST",
-                     data: { to: $('#to').val() , from: $('#from').val(), subject: $('#subject').val(), body: $('#body').val() } ,
+                     data: { to: $('#to').val() , from: $('#from').val(), subject: $('#subject').val(), body: $('#body').val(), "g-recaptcha-response" : grecaptcha.getResponse() } ,
                      success: function(result){
-                        success1.show();
+                        var res = $.parseJSON(result);                         
+                        if(res.status == 'captchaerror')
+                        {
+                             location.reload();
+                        } else if(res.status == 'success') {    
+                            success1.show();
+                        }
                      }   
                     });                    
                     error1.hide();

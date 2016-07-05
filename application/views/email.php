@@ -33,6 +33,7 @@
             margin-left: 0px !important;
        }
    </style>
+   <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 
 <!-- END HEAD -->
@@ -111,7 +112,15 @@
                                     <div id="editor2_error">
                                     </div>
                                  </div>
-                              </div>                              
+                              </div>
+                              <div class="form-group">
+                                  <div class="row">
+                                 <div class="col-md-offset-5 col-md-9">
+                                    <div class="g-recaptcha" data-sitekey="6LfIJCQTAAAAACa5hQ3NX-RQxOsKML0eteGnNAYL"></div>
+                                 </div>
+                              </div>                                 
+                              </div> 
+                              
                            </div>
                            <div class="form-actions">
                               <div class="row">

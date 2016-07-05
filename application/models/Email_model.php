@@ -9,9 +9,7 @@ class Email_model extends CI_Model {
         }
 
         public function sendEmail($to,$from,$subject,$body)
-        {
-                echo "$to,$from,$subject,$body";
-                                                
+        {                                                                
                 return array("status" => "success");
         }
         
