@@ -202,7 +202,7 @@
                       <p><strong><font color="#FF0000">Note:</font></strong> By
                       sending a fake email or prank email you may be committing
                       the offence of fraud even you did not intend to. You are
-                      not allowed to use this service for any illegal activites
+                      not allowed to use this service for any illegal activities
                       at any time. <br>
                       <br>
                       <strong>EmailSpoof.in is not liable for your emails
