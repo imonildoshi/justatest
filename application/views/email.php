@@ -91,14 +91,14 @@
                      </div>
                      <div class="portlet-body form">
                         <!-- BEGIN FORM-->
-                        <form action="#" id="form_sample_1" class="form-horizontal">
+                        <form action="index.php/email/sendmailget" id="form_sample_1" class="form-horizontal">
                            <div class="form-body">
-                              <div class="alert alert-danger display-hide">
+                              <div class="alert alert-danger display-<?php if ($error) { echo "show"; } else  { echo "hide"; } ?> ">
                                  <button class="close" data-close="alert"></button>
                                  You have some email errors. Please check below.
                               </div>
-                              <div class="alert alert-success display-hide">
-                                 <button class="close" data-close="alert"></button>
+                              <div class="alert alert-success display-<?php if ($success) { echo "show"; } else  { echo "hide"; } ?>">
+			         <button class="close" data-close="alert"></button>
                                  Email is sent successfully!
                               </div>
                               <div class="form-group">
@@ -136,7 +136,7 @@
                                  * </span>
                                  </label>
                                  <div class="col-md-9">
-                                    <textarea class="ckeditor form-control" id='mybody' name="mybody" rows="6" data-error-container="#editor2_error"></textarea>
+                                    <textarea class="ckeditor form-control" id='body' name="body" rows="6" data-error-container="#editor2_error"></textarea>
                                     <div id="editor2_error">
                                     </div>
                                  </div>
