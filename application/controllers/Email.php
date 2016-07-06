@@ -5,14 +5,21 @@ class Email extends CI_Controller {
     
     public function index()
     {
+        $this->load->model('email_model');
+        
 	$data['error'] = $this->session->flashdata('error');
 	$data['success'] = $this->session->flashdata('success');
+        
+        if(!($data['error'] || $data['success']))
+        {
+            $monil = new Monil();
+            $this->email_model->saveClient($monil);
+        }
         $this->load->view('email',$data);
     }
     
     public function sendmail()
-    {
-        $this->load->library('Monil');
+    {        
         $this->load->model('email_model');       
         $monil = new Monil(); 
         
@@ -35,9 +42,7 @@ class Email extends CI_Controller {
     }
 
     public function sendmailget()
-    {
-        $this->load->library('Monil');
-	$this->load->library('session');
+    {       
         $this->load->model('email_model');       
         $monil = new Monil(); 
         

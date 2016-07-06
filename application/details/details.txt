@@ -1,0 +1,17 @@
+mysql -uroot -pqwerasdf -A emailspoof
+
+CREATE TABLE `spoof_hit_details` (
+   `trid` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+   `hdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+   `ipaddress` varchar(255) DEFAULT '',
+   `country` varchar(255) DEFAULT '',
+   `city` varchar(255) DEFAULT '',
+   `platform` varchar(255) DEFAULT '',
+   `agent` varchar(255) DEFAULT '',
+   `referer` varchar(255) DEFAULT '',
+  PRIMARY KEY (`trid`)
+);
+
+
+
+
