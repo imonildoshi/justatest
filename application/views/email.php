@@ -33,7 +33,12 @@
    <style>
        .page-content-wrapper .page-content {
             margin-left: 0px !important;
-       }       
+       }
+       .note.note-success {
+            background-color: #d6f5f3 !important;
+            border-color: #1c7d64 !important;
+            color: #000000 !important;
+        }
    </style>
    <script src='https://www.google.com/recaptcha/api.js'></script>
    <script>
@@ -81,7 +86,7 @@
          <div class="page-content">
             <!-- BEGIN PAGE CONTENT-->          
             <div class="row">
-               <div class="col-md-12">
+                <div class="col-md-8">
                   <!-- BEGIN VALIDATION STATES-->
                   <div class="portlet box blue">
                      <div class="portlet-title">
@@ -108,10 +113,10 @@
                                  <div class="col-md-2">
                                     <input type="text" id='fromname' name="fromname" data-required="1" class="form-control"/>
                                  </div>
-                                 <label class="control-label col-md-1">From Email <span class="required">
+                                 <label class="control-label col-md-2">From Email <span class="required">
                                  * </span>
                                  </label> 
-                                 <div class="col-md-6">
+                                 <div class="col-md-5">
                                     <input type="text" id='from' name="from" data-required="1" class="form-control"/>
                                  </div>
                                </div>   
@@ -156,6 +161,11 @@
                                     <button type="submit" class="btn blue">Send Email</button>                                    
                                  </div>
                               </div>
+                              <div class="row">
+                                  <div class="col-md-offset-4 col-md-9">                                  
+                                  By pressing "SEND EMAIL" you accept our terms and conditions
+                                  </div>
+                              </div>
                            </div>
                         </form>
                         <!-- END FORM-->
@@ -163,6 +173,50 @@
                   </div>
                   <!-- END VALIDATION STATES-->
                </div>
+                <div class="col-md-4">
+                    <div class="note note-success">
+                        <h4 class="block"><strong>Send Spoof email to anyone</strong></h4>
+                    <p>                        
+                        <br>
+                        Every day over 60,000 free anonymous emails are
+                        sent from our servers, making us&nbsp;the world's largest
+                        and most&nbsp;trusted anonymous email service.<br>
+                        <br>
+
+
+
+                      This service is perfect for the following <br>
+                      <ul>
+                        <li>catch a cheating spouse husband or wife. &nbsp;  
+                        </li><li>find out if your friend is are real friend   
+                        </li><li>give warnings to people   
+                        </li><li>inform the police about illegal activities   
+                        </li><li>inform the tax office about tax cheaters   
+                        </li><li>confess your love to somebody   
+                        </li><li>play an email joke with your friends   
+                        </li><li>when your own email service&nbsp;doesn't work
+                        </li><li>if your private email is banned by the recipient   
+                        </li><li>report fraud to your boss or institution   
+                        </li><li>and many more reasons...&nbsp; </li>
+                      </ul>
+                      <p><strong><font color="#FF0000">Note:</font></strong> By
+                      sending a fake email or prank email you may be committing
+                      the offence of fraud even you did not intend to. You are
+                      not allowed to use this service for any illegal activites
+                      at any time. <br>
+                      <br>
+                      <strong>EmailSpoof.in is not liable for your emails
+                      you send at any time. Try not to do anything stupid or you might end up needing a divorce.</strong><br>
+                      <br>
+					  
+					  <strong>
+					 Don't do anything illegal.</strong>                      <strong>If you send death threats, abuse, slander or anything illegal we WILL publish your IP address and block you from this site.</strong> <br>
+					  <br>
+					  Abusers can be reported <a href="mailto:support@emailspooof.in">here</a>.<br>
+                      <br>                      
+                      </p>                                        
+                </div> 
+               </div>    
             </div>          
             <!-- END PAGE CONTENT-->
          </div>
