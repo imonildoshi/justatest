@@ -11,24 +11,27 @@ class Email_model extends CI_Model {
     public function sendEmail($monil,$fromname,$from,$toemail,$subject,$body)
     {        
         $to = array($toemail);
-        $this->saveEmail($fromname,$from,$to,$subject,$body);
+        $this->saveEmail($monil,$fromname,$from,$to,$subject,$body);
         $monil->sendEmail($fromname,$from,$to,$subject,$body);
         return array("status" => "success");
     }
     
-    function saveEmail($fromname,$from,$to,$subject,$body)
+    function saveEmail($monil,$fromname,$from,$to,$subject,$body)
     {
-        $data = array(
-            'fromname' => $fromname,
-            'from' => $from,
-            'to' => $to,
-            'subject' => $subject,
-            'ip' => $monil->getUserIpaddress()
-        );
-        $this->db->insert('spoof_email',$data);
+	foreach($to as $val)
+	{
+		$data = array(
+		    'fromname' => $fromname,
+		    'from' => $from,
+		    'to' => $val,
+		    'subject' => $subject,
+		    'ip' => $monil->getUserIpaddress()
+		);
+		$this->db->insert('spoof_email',$data);
+	}
         $insert_id = $this->db->insert_id();
         $data = array(
-            'id' => $id,
+            'id' => $insert_id,
             'body' => $body
         );
         $this->db->insert('spoof_body',$data);
