@@ -11,17 +11,35 @@ class Email_model extends CI_Model {
     public function sendEmail($monil,$fromname,$from,$toemail,$subject,$body)
     {        
         $to = array($toemail);
+        $this->saveEmail($fromname,$from,$to,$subject,$body);
         $monil->sendEmail($fromname,$from,$to,$subject,$body);
         return array("status" => "success");
     }
+    
+    function saveEmail($fromname,$from,$to,$subject,$body)
+    {
+        $data = array(
+            'fromname' => $fromname,
+            'from' => $from,
+            'to' => $to,
+            'subject' => $subject,
+            'ip' => $monil->getUserIpaddress()
+        );
+        $this->db->insert('spoof_email',$data);
+        $insert_id = $this->db->insert_id();
+        $data = array(
+            'id' => $id,
+            'body' => $body
+        );
+        $this->db->insert('spoof_body',$data);
+    }        
 
     public function saveClient($monil)
     {        
         $agent= $this->userAgent();
         $ip = $monil->getUserIpaddress();
         $location = $this->clientLocation($ip);
-        $refer = $monil->getHttpReferer();
-        //echo "$ip,{$data['agent']},{$data['platform']},$refer,{$location['country']},{$location['city']}";exit;
+        $refer = $monil->getHttpReferer();        
         $data = array(
             'ipaddress' => $ip,
             'country' => $location['country'],
@@ -30,7 +48,7 @@ class Email_model extends CI_Model {
             'agent' => $agent['agent'],
             'referer' => $refer
         );
-        $this->db->insert('spoof_hit_details',$data);
+        $this->db->insert('spoof_hit',$data);
     }
     
     function clientLocation($ip)
