@@ -41,12 +41,22 @@
         }
    </style>
    <script src='https://www.google.com/recaptcha/api.js'></script>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-2062062742259277",
-    enable_page_level_ads: true
-  });
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '139446839815000',
+      xfbml      : true,
+      version    : 'v2.6'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
 </script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -94,18 +104,26 @@
          <div class="page-content">
             <!-- BEGIN PAGE CONTENT-->      
 	<div class="row">
+	<div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
 	<div class="col-md-12">  
 
-	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- first -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Emailspoof.in -->
 <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-2062062742259277"
-     data-ad-slot="7344904348"
+     data-ad-slot="8342871148"
      data-ad-format="auto"></ins>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+
+
  
 </div>
  </div>

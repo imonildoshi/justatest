@@ -22,7 +22,8 @@ class Email extends CI_Controller {
     {        
         $this->load->model('email_model');       
         $monil = new Monil(); 
-        
+       
+ 
         $captcha = $this->input->post('g-recaptcha-response');
         $secret = '6LfIJCQTAAAAAOkoNG0-4rbXx6J3_wfofbs6fmn_';
         $response = json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secret."&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']), true);

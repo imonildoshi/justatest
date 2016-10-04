@@ -38,7 +38,8 @@ class Email_model extends CI_Model {
     }        
 
     public function saveClient($monil)
-    {        
+    {   
+	return;     
         $agent= $this->userAgent();
         $ip = $monil->getUserIpaddress();
         $location = $this->clientLocation($ip);
